@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="automate.capstone.feeder.Settings"
+    tools:showIn="@layout/app_bar_settings">
+
+
+    <!-- text to be displayed whenever current state is checked-->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="137dp"
+        android:text="Notify Container Status at:"
+        android:textSize="20sp" />
+
+    <SeekBar
+        android:id="@+id/sb_notif"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:max="4"
+        android:progress="3" />
+
+    <TextView
+        android:id="@+id/tv_percentage_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sb_notif"
+        android:layout_toEndOf="@+id/sb_notif"
+        android:text="30%" />
+
+    <Button
+        android:id="@+id/btn_submit_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_notif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:onClick="saveConfig"
+        android:text="Save" />
+
+    <EditText
+        android:id="@+id/et_mobnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sb_notif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="+639568819886" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_mobnum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Mobile number to send notifications:" />
+
+</RelativeLayout>

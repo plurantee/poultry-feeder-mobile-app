@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">My Feed Scheduler</string>
+    <string name="title_activity_home">My Feed Scheduler</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_automatic_mode">Automatic Mode</string>
+    <string name="title_activity_manual_mode">Manual Mode</string>
+    <string name="title_activity_view_logs">View Logs</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_view_schedule_list">View Schedule</string>
+    <string name="title_activity_view_schedule">Edit Schedule</string>
+    <string-array name="duration_key">
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
+    </string-array>
+    <string-array name="duration_value">
+        <item>24</item>
+        <item>48</item>
+        <item>72</item>
+        <item>96</item>
+        <item>120</item>
+        <item>144</item>
+        <item>168</item>
+    </string-array>
+    <string-array name="measure_key">
+        <item>G</item>
+    </string-array>
+    <string-array name="measure_value">
+        <item>1</item>
+        <item>2.20462</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

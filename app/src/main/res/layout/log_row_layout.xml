@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="automate.capstone.feeder.ViewLogs">
+
+    <TextView
+        android:id="@+id/tv_log_info"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="29dp"
+        android:gravity="left"
+        android:text="Type" />
+
+    <TextView
+        android:id="@+id/tv_log_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_log_info"
+        android:layout_below="@+id/tv_log_info"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:text="Info"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_log"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/ic_info_outline_black"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+
+</RelativeLayout>

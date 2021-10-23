@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="automate.capstone.feeder.ViewSchedule">
+
+
+    <TextView
+        android:id="@+id/tv_schedule_name_recycler"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_alignTop="@id/btn_delete_sched"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_schedule_info_recycler"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:layout_below="@+id/tv_schedule_name_recycler"
+        android:layout_alignStart="@+id/tv_schedule_name_recycler" />
+
+    <Button
+        android:id="@+id/btn_view_sched_info"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tv_schedule_name_recycler"
+        android:background="@drawable/ic_info_outline_black"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/btn_delete_sched"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_view_sched_info"
+        android:layout_toEndOf="@+id/btn_view_sched_info"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/ic_delete_black" />
+
+
+    <TextView
+        android:id="@+id/tv_hidden_leaf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placehold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="automate.capstone.feeder">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/CustomTheme">
+
+
+        <activity android:name=".SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".AutomaticMode"
+            android:label="@string/title_activity_automatic_mode"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ManualMode"
+            android:label="@string/title_activity_manual_mode"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ViewLogs"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_view_logs"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ViewScheduleList"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_view_schedule_list"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ViewSchedule"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_view_schedule"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="automate.capstone.feeder.HomeActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_time_automatic_sched_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="20sp"
+        tools:text="asdasd" />
+
+    <Button
+        android:id="@+id/btn_remove_time_schedule"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@+id/tv_time_automatic_sched_recycler"
+        android:background="@android:drawable/ic_menu_close_clear_cancel" />
+
+</RelativeLayout>

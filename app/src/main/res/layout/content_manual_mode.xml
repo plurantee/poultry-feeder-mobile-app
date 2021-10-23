@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="automate.capstone.feeder.ManualMode"
+    tools:showIn="@layout/app_bar_manual_mode">
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:text="Enter Amount of Feeds" />
+
+    <EditText
+        android:id="@+id/et_manual_feed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_drop_feeds"
+        android:layout_below="@+id/tv_desc"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <Spinner
+        android:id="@+id/spnr_manual_unit"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="?attr/colorButtonNormal"
+        android:entries="@array/measure_key"
+        android:layout_alignBottom="@+id/et_manual_feed"
+        android:layout_toEndOf="@+id/et_manual_feed"
+        android:layout_marginStart="13dp" />
+
+    <Button
+        android:id="@+id/btn_drop_feeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Drop Feeds"
+        android:onClick="onSubmitManual"/>
+
+</RelativeLayout>

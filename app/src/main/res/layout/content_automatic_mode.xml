@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="automate.capstone.feeder.AutomaticMode"
+    tools:showIn="@layout/app_bar_automatic_mode">
+
+    <TextView
+        android:id="@+id/tv_schedule_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="19dp"
+        android:text="Schedule Name:"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/et_schedule_name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_schedule_name"
+        android:layout_alignBottom="@+id/tv_schedule_name"
+        android:layout_toEndOf="@+id/tv_schedule_name"
+        android:backgroundTint="@android:color/darker_gray"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/tv_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_schedule_name"
+        android:layout_below="@+id/et_schedule_name"
+        android:layout_marginTop="15dp"
+        android:text="Start Date"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_start_date"
+        android:layout_alignBottom="@+id/tv_start_date"
+        android:layout_alignStart="@+id/et_schedule_name"
+        android:layout_marginStart="44dp"
+        android:text="Duration"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_start_date_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_start_date"
+        android:layout_alignBottom="@+id/btn_start_date"
+        android:layout_alignStart="@+id/tv_start_date"
+        android:text="Tap to set date" />
+
+    <Button
+        android:id="@+id/btn_start_date"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tv_duration"
+        android:layout_toEndOf="@+id/tv_start_date_desc"
+        android:background="@drawable/ic_date_range_black" />
+
+    <Spinner
+        android:id="@+id/spnr_duration"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/tv_duration"
+        android:layout_alignTop="@+id/tv_start_date_desc"
+        android:background="?attr/colorButtonNormal"
+        android:entries="@array/duration_key"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_time_desc"
+        android:layout_below="@+id/spnr_duration"
+        android:text="Time:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_time_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_start_date_desc"
+        android:layout_below="@+id/spnr_duration"
+        android:layout_marginTop="33dp"
+        android:text="Tap to add time" />
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_alignTop="@+id/tv_time_desc"
+        android:layout_toEndOf="@+id/tv_time_desc"
+        android:background="@drawable/ic_schedule_black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_time_desc"
+        android:layout_below="@+id/btn_time"
+        android:layout_marginTop="13dp"
+        android:text="Schedule"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spnr_unit"
+        android:layout_toStartOf="@+id/et_feeds"
+        android:text="Feed amount"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_feeds"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_automatic_mode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/spnr_unit"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/et_feeds"
+        android:layout_alignBottom="@+id/et_feeds"
+        android:layout_toEndOf="@+id/et_feeds"
+        android:background="?attr/colorButtonNormal"
+        android:entries="@array/measure_key" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_feeds"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:onClick="saveLog"
+        android:text="Save" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="300dp"
+        android:id="@+id/recycler_automatic_mode"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv_schedule"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

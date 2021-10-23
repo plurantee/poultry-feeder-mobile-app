@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="automate.capstone.feeder.ViewSchedule"
+    tools:showIn="@layout/app_bar_view_schedule">
+
+
+    <TextView
+        android:id="@+id/tv_edit_schedule_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Set New Name:"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_edit_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_edit_schedule_name"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/tv_edit_schedule_name"
+        android:text="Set New Date: "/>
+
+
+    <TextView
+        android:id="@+id/tv_edit_feed_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/btn_edit_time"
+        android:layout_marginTop="16dp"
+        android:text="Set New Feed Amount: " />
+
+    <Spinner
+        android:id="@+id/edit_spnr_unit"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_toEndOf="@+id/et_edit_feed_amount"
+        android:background="?attr/colorButtonNormal"
+        android:entries="@array/duration_key" />
+
+
+    <EditText
+        android:layout_toRightOf="@+id/tv_edit_schedule_name"
+        android:id="@+id/et_schedule_name_placeholder"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_edit_schedule_name"
+        android:layout_alignBaseline="@id/tv_edit_schedule_name"
+        android:text="Schedule Name Placeholder"/>
+
+    <TextView
+        android:id="@+id/tv_edit_date_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignTop="@+id/btn_edit_date"
+        android:text="asd" />
+
+
+    <Button
+        android:id="@+id/btn_edit_date"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/tv_edit_date"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/ic_menu_my_calendar" />
+
+    <Button
+        android:id="@+id/btn_edit_time"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/btn_edit_date"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/ic_menu_recent_history" />
+
+    <EditText
+        android:layout_toRightOf="@+id/tv_edit_feed_amount"
+        android:id="@+id/et_edit_feed_amount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_edit_feed_amount"
+        />
+
+    <Spinner
+        android:id="@+id/spnr_edit_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_edit_feed_amount"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/et_edit_feed_amount"
+        android:background="?attr/colorButtonNormal"
+        android:entries="@array/measure_key" />
+
+
+    <Button
+        android:id="@+id/btn_edit_accept"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/recycler_edit_schedule"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:onClick="editAccept"
+        android:text="Accept" />
+
+    <Button
+        android:id="@+id/btn_edit_cancel"
+        android:layout_width="100dp"
+
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_edit_accept"
+        android:layout_below="@+id/btn_edit_accept"
+        android:layout_marginTop="27dp"
+        android:onClick="editCancel"
+        android:text="Cancel" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_edit_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="200dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_edit_date"
+        android:layout_below="@+id/btn_edit_date"
+        android:text="Set New Time" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_edit_time"
+        android:layout_alignBottom="@+id/btn_edit_time"
+        android:layout_alignEnd="@+id/btn_edit_accept"
+        android:text="Duration" />
+</RelativeLayout>
